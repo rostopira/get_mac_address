@@ -50,7 +50,7 @@ void GetMacAddressPlugin::HandleMethodCall(
     char* pMac = getMAC();
     const std::string macAddress = std::string(pMac);
     free(pMac);
-    result->Success(flutter::EncodableValue(macAddress.c_str()));
+    result->Success(flutter::EncodableValue(macAddress));
   } else {
     result->NotImplemented();
   }
